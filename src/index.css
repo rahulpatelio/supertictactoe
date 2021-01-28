@@ -1,13 +1,75 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+@font-face {
+  font-family:'MyWebFont';
+  src: url('./fonts/SuperMario256.ttf');
+  src: url('./fonts/SuperMario256.woff');
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background: url("./images/superMario2.jpg");
+  background-size: cover;
+  color: rgb(7, 6, 6);
+  font-family: 'MyWebFont', sans-serif;
+  display: flex;
+  justify-content: center;
+  min-height: 100vh;
+  padding: 1rem;
+}
+
+h1 {
+  margin: 0.75rem 0.1rem;
+  text-align: center;
+  font-weight: bolder;
+  font-size: 30px;
+}
+
+.board {
+  border: 1rem solid goldenrod;
+  background: black;
+  width: 350px;
+  height: 350px;
+  display: grid;
+  grid-template: repeat(3, 1fr) / repeat(3, 1fr);
+  gap: 0.25rem;
+}
+
+.squares {
+  background: goldenrod;
+  border: 4px solid black;
+  font-size: 4rem;
+  font-weight: 800;
+  cursor: pointer;
+  outline: none;
+}
+
+.info-wrapper {
+  display: flex;
+  justify-content: space-between;
+}
+
+h3 {
+  padding: 1rem;
+  font-size: 17px;
+  font-weight: bolder;
+}
+
+li {
+  list-style: none;
+}
+
+.info-wrapper button {
+  background: skyblue;
+  color: black;
+  font-size: 13px;
+  font-weight: bold;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  padding: 0.5rem;
+  margin: 0.5rem 1rem;
 }
